@@ -87,24 +87,25 @@ function validateEveryField() {
     successMessage(imageurl);
     imageurlstatus = true;
   }
-  console.log( booknamestatus,
+  console.log(
+    booknamestatus,
     authorstatus,
     genrestatus,
     descriptionstatus,
-    imageurlstatus)
+    imageurlstatus
+  );
   status =
     booknamestatus &&
     authorstatus &&
     genrestatus &&
     descriptionstatus &&
     imageurlstatus;
-   
 }
 
 document.querySelector(".submit-btn").addEventListener("click", () => {
- validateEveryField();
+  validateEveryField();
 });
 function validate() {
-
-   return status;
+  
+  return status;
 }
