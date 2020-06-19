@@ -35,53 +35,52 @@
 <main>
   <div class="container">
         <div class="card card-container">
-        <h2 class='login_title text-center'>ADD BOOK</h2>
+        <h2 class='text-center'>ADD BOOK</h2>
         <hr>
 
-            <form class="form-addbook" action="index.html" method="post" onsubmit="return validate()">
+            <form class="form" action="" method="post" onsubmit="return validate()">
                 <p class="input_title">Book Name</p>
-                <div class="email">
-                <input type="text" id="inputbookname" class="login_box form-control " placeholder="bookname" autofocus>
+                <div>
+                <input type="text" id="bookname" class=" form-control " placeholder="bookname" autofocus>
                 <div class="valid-feedback">
                  ok!
                 </div>
                 <div class="invalid-feedback">
                   please fill this field!
                 </div>
-                </div>
-                <p class="input_title">Author</p>
-                <div class="email">
-                <input type="text" id="inputbookname" class="login_box form-control " placeholder="Author" autofocus>
-                <div class="valid-feedback">
-                 ok!
-                </div>
-                <div class="invalid-feedback">
-                  please fill this field!
-                </div>
-                </div>
-                <p class="input_title">Description</p>
-                <div class="email">
-                <input type="text" id="inputbookname" class="login_box form-control " placeholder="Description" autofocus>
-                <div class="valid-feedback">
-                 ok!
-                </div>
-                <div class="invalid-feedback">
-                  please fill this field!
-                </div>
-                </div>
-                <p class="input_title">Image Url</p>
-                <div class="email">
-                <input type="text" id="inputbookname" class="login_box form-control " placeholder="Image Url" autofocus>
-                <div class="valid-feedback">
-                 ok!
-                </div>
-                <div class="invalid-feedback">
-                  please fill this field!
-                </div>
-                </div>
-                <button class="submit-btn btn-lg btn-primary col-md-5 ml-30" type="submit">ADD</button>
-                </div>
-                
+              </div>
+              <p class="input_title">genre</p>
+              <div>
+              <input type="text" id="genre" class=" form-control " placeholder="Genre" autofocus>
+              <div class="valid-feedback">
+               ok!
+              </div>
+              <div class="invalid-feedback">
+                please fill this field!
+              </div>
+            </div>
+            <p class="input_title">Description</p>
+            <div>
+            <input type="text" id="Description" class=" form-control " placeholder="description" autofocus>
+            <div class="valid-feedback">
+             ok!
+            </div>
+            <div class="invalid-feedback">
+              please fill this field!
+            </div>
+          </div>
+          <p class="input_title">ImageUrl</p>
+          <div>
+          <input type="text" id="imageurl" class=" form-control " placeholder="imageurl" autofocus>
+          <div class="valid-feedback">
+           ok!
+          </div>
+          <div class="invalid-feedback">
+            please fill this field!
+          </div>
+        </div>
+        <br>
+        <button class="submit-btn btn-lg btn-primary" type="submit">ADD</button>
             </form><!-- /form -->
         </div><!-- /card-container -->
     </div><!-- /container -->

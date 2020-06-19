@@ -3,7 +3,7 @@ const bookname=document.getElementById("bookname");
 const author=document.getElementById("author");
 const imageurl=document.getElementById("imageurl");
 const genre=document.getElementById("genre");
-const description=document.getElementById("description")
+const description=document.getElementById("description");
 function insertValidClass(element) {
   element.classList.add("is-valid");
 }
@@ -40,17 +40,43 @@ function isEmpty(element) {
 
 
 function validateEveryField() {
-  let emailStatus, passwordStatus;
-  [emailStatus, passwordStatus] = [false, false];
+  let bookname,author,genre,description,imageurl;
+  [bookname,author,genre,description,imageurl] = [false, false,false,false,false];
 
-  if (isEmpty(inputPassword)) {
-    cantBeEmptyMessage(inputPassword);
-    inputPassword.focus();
+  if (isEmpty(bookname)) {
+    cantBeEmptyMessage(bookname);
+    bookname.focus();
+    
   } 
-  if (isEmpty(inputEmail)) {
-    cantBeEmptyMessage(inputEmail);
-    inputEmail.focus();
-  } 
+  else{
+      bookstatus=true;
+  }
+  if (isEmpty(author)) {
+    cantBeEmptyMessage(author);
+    author.focus();
+    
+  }  else{
+    bookstatus=true;
+}
+  if (isEmpty(genre)) {
+    cantBeEmptyMessage(genre);
+    genre.focus();
+  }  else{
+    bookstatus=true;
+}
+  if (isEmpty(description)) {
+    cantBeEmptyMessage(description);
+    description.focus();
+  }  else{
+    bookstatus=true;
+}
+  if (isEmpty(imageurl)) {
+    cantBeEmptyMessage(imagurl);
+    imageurl.focus();
+  }  else{
+    bookstatus=true;
+}
+  return 
   
 }
 
