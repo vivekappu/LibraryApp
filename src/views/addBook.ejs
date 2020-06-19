@@ -38,10 +38,20 @@
         <h2 class='text-center'>ADD BOOK</h2>
         <hr>
 
-            <form class="form" action="" method="post" onsubmit="return validate()">
+            <form class="form" action="/books" method="get" onsubmit="return validate()">
                 <p class="input_title">Book Name</p>
                 <div>
                 <input type="text" id="bookname" class=" form-control " placeholder="bookname" autofocus>
+                <div class="valid-feedback">
+                 ok!
+                </div>
+                <div class="invalid-feedback">
+                  please fill this field!
+                </div>
+              </div>
+              <p class="input_title">Author</p>
+                <div>
+                <input type="text" id="author" class=" form-control " placeholder="author" autofocus>
                 <div class="valid-feedback">
                  ok!
                 </div>
@@ -61,7 +71,7 @@
             </div>
             <p class="input_title">Description</p>
             <div>
-            <input type="text" id="Description" class=" form-control " placeholder="description" autofocus>
+            <input type="text" id="description" class=" form-control " placeholder="description" autofocus>
             <div class="valid-feedback">
              ok!
             </div>
@@ -102,10 +112,10 @@
   <!--/footer-->
 
   <!--validation js-->
-  <script src="./js/signin.js"></script>
+  
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script src="./js/highlighter.js"></script>
-  <script src="./js/script.js"></script>
+  <script src="./js/bookvalidation.js"></script>
   </body>
   </html>

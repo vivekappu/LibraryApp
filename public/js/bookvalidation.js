@@ -1,9 +1,9 @@
-let status = false; //validation status
-const bookname=document.getElementById("bookname");
-const author=document.getElementById("author");
-const imageurl=document.getElementById("imageurl");
-const genre=document.getElementById("genre");
-const description=document.getElementById("description");
+let status = false;
+const bookname = document.getElementById("bookname");
+const author = document.getElementById("author");
+const imageurl = document.getElementById("imageurl");
+const genre = document.getElementById("genre");
+const description = document.getElementById("description");
 function insertValidClass(element) {
   element.classList.add("is-valid");
 }
@@ -38,51 +38,73 @@ function isEmpty(element) {
   return !element.value.length;
 }
 
-
 function validateEveryField() {
-  let bookname,author,genre,description,imageurl;
-  [bookname,author,genre,description,imageurl] = [false, false,false,false,false];
+  let booknamestatus,
+    authorstatus,
+    genrestatus,
+    descriptionstatus,
+    imageurlstatus;
+  [
+    booknamestatus,
+    authorstatus,
+    genrestatus,
+    descriptionstatus,
+    imageurlstatus,
+  ] = [false, false, false, false, false];
 
   if (isEmpty(bookname)) {
     cantBeEmptyMessage(bookname);
     bookname.focus();
-    
-  } 
-  else{
-      bookstatus=true;
+  } else {
+    successMessage(bookname);
+    booknamestatus = true;
   }
   if (isEmpty(author)) {
     cantBeEmptyMessage(author);
     author.focus();
-    
-  }  else{
-    bookstatus=true;
-}
+  } else {
+    successMessage(author);
+    authorstatus = true;
+  }
   if (isEmpty(genre)) {
     cantBeEmptyMessage(genre);
     genre.focus();
-  }  else{
-    bookstatus=true;
-}
+  } else {
+    successMessage(genre);
+    genrestatus = true;
+  }
   if (isEmpty(description)) {
     cantBeEmptyMessage(description);
     description.focus();
-  }  else{
-    bookstatus=true;
-}
+  } else {
+    successMessage(description);
+    descriptionstatus = true;
+  }
   if (isEmpty(imageurl)) {
-    cantBeEmptyMessage(imagurl);
+    cantBeEmptyMessage(imageurl);
     imageurl.focus();
-  }  else{
-    bookstatus=true;
-}
-  return 
-  
+  } else {
+    successMessage(imageurl);
+    imageurlstatus = true;
+  }
+  console.log( booknamestatus,
+    authorstatus,
+    genrestatus,
+    descriptionstatus,
+    imageurlstatus)
+  status =
+    booknamestatus &&
+    authorstatus &&
+    genrestatus &&
+    descriptionstatus &&
+    imageurlstatus;
+   
 }
 
 document.querySelector(".submit-btn").addEventListener("click", () => {
-    validateEveryField();
-  });
+ validateEveryField();
+});
 function validate() {
-  return status;
+
+   return status;
 }
