@@ -4,5 +4,6 @@ const nav = [
   { link: "/authors", name: "authors" },
   { link: "/signin", name: "signin" },
   { link: "/signup", name: "signup" },
+  { link:"/addbook",name:"addbook"}
 ];
 exports.nav = nav;

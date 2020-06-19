@@ -7,6 +7,8 @@ const { booksRouter } = require("./src/Routes/booksRouter");
 const { authorsRouter } = require("./src/Routes/authorsRouter");
 const { signinRouter } = require("./src/Routes/signinRouter");
 const { signupRouter } = require("./src/Routes/signupRouter");
+const { Router } = require("express");
+const { addBookRouter } = require("./src/Routes/addBookRouter");
 const app = new express();
 app.use(express.static("./public"));
 app.set("view engine", "ejs");
@@ -15,6 +17,8 @@ app.use("/books", booksRouter);
 app.use("/authors", authorsRouter);
 app.use("/signin", signinRouter);
 app.use("/signup", signupRouter);
+app.use("/addbook",addBookRouter)
+
 app.get("/", function (req, res) {
   res.render("index", {
     nav,

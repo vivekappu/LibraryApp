@@ -19,12 +19,5 @@ booksRouter.get("/:id/:bookname", function (req, res) {
     book: books[id],
   });
 });
-booksRouter.get("/addbook", function (req, res) {
-  res.render("addbook", {
-    nav,
-    title: "add New Book",
-    active: "Books",
-  });
-});
 
 exports.booksRouter = booksRouter;
